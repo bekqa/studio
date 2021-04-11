@@ -13,10 +13,10 @@ import static org.junit.Assert.assertTrue;
 public class BaseTest {
     WebDriver driver;
 
-    @BeforeClass
-    public static void setupClass() {
-        WebDriverManager.chromedriver().setup();
-    }
+//     @BeforeClass
+//     public static void setupClass() {
+//         WebDriverManager.chromedriver().setup();
+//     }
 
     @Before
     public void setUp() {
