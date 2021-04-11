@@ -9,5 +9,8 @@
         <module name="MyInsightsStudio" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="studio" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>
