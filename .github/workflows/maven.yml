@@ -5,7 +5,8 @@ name: Studio Automation
 
 on:
   push:
-    branches: [ master ]
+    branches:
+    - ci
   pull_request:
     branches: [ master ]
 
@@ -21,7 +22,6 @@ jobs:
       with:
         java-version: '11'
         distribution: 'adopt'
-    
     - name: Run UI tests
       env:
         SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
