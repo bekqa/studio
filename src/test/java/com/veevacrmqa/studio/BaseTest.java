@@ -28,7 +28,7 @@ public class BaseTest {
         driver.quit();
     }
     private WebDriver getDriver(){
-        new SauceSession().start();
+        return new SauceSession().start();
     }
 
     public void successfullyLogin(){
