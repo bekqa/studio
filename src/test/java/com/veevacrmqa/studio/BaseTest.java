@@ -7,6 +7,8 @@ import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import static org.junit.Assert.assertTrue;
+
 public class BaseTest {
     WebDriver driver;
 
@@ -23,6 +25,13 @@ public class BaseTest {
     @After
     public void tearDown() {
         driver.quit();
+    }
+
+    public void successfullyLogin(){
+        driver.navigate().to("https://studio-rel-app-us.veevacrmqa.com/signin");
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.login();
+        assertTrue(new HomePage(driver).isLoaded());
     }
 
 }
